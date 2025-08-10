@@ -86,14 +86,19 @@ To deploy on Databricks:
 
 #### Term Definition 
     • SparkSession: The entry point for interacting with Spark.
+    ---
     • readStream().format("delta").load(...): Reads data from a Delta Lake table as a streaming source. You can also read from other 
     sources like Kafka or cloud storage.
+    ---
     • schema(...): Defines the structure of your incoming streaming data.
+    ---
     • filter(...): Applies a transformation to filter data based on a condition.
+    ---
     • writeStream().format("delta").outputMode(...).option("checkpointLocation", ...).start(...): Writes the processed stream to 
     a Delta Lake table.
         ◦ outputMode: Determines how the output is written (e.g., append for new rows, complete for full results, update for changes).
         ◦ checkpointLocation: Crucial for fault tolerance, storing information about the processed data to enable recovery from failures.
+        ---
     • awaitTermination(): Keeps the streaming query running indefinitely until explicitly stopped or an error occurs.
 ---
 ### Author's Background
