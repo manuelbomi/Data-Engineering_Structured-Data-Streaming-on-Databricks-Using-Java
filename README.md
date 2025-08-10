@@ -74,9 +74,13 @@ public class SimpleStreamProcessor {
 #### Job Deployment on Databricks
 
 To deploy on Databricks:
+---
     • Create a JAR: Compile your Java code into a JAR file.
+    ---
     • Upload to Databricks: Upload the JAR to your Databricks workspace.
+    ---
     • Create a Job: Configure a Databricks job, selecting your uploaded JAR and specifying the main class (SimpleStreamProcessor in this example).
+    ---
     • Attach to Cluster: Attach the job to a suitable Databricks cluster for execution.
 
 
